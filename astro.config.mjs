@@ -74,7 +74,9 @@ export default defineConfig({
   prefetch: {
     defaultStrategy: "viewport",
   },
-  redirects: {
-    "/": "/shop",
+  redirects: async (context) => {
+    if (context.url.pathname === '/') {
+      return context.redirect('/shop');
+    }
   },
 });

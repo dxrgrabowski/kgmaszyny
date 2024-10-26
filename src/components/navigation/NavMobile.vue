@@ -19,7 +19,7 @@
         <slot name="logo" />
       </div>
       <slot name="links" />
-      <slot name="social" />
+
     </div>
   </transition>
 </template>

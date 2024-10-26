@@ -284,31 +284,6 @@ export const settings = {
           default: "tel:+316000000",
         },
         {
-          name: "social",
-          label: t("socials"),
-          widget: "list",
-          required: false,
-          collapsed: true,
-
-          summary: "{{fields.label}} | {{fields.href}}",
-          fields: [
-            { name: "label", label: t("label"), widget: "string" },
-            { name: "href", label: t("href"), widget: "string" },
-            {
-              name: "icon",
-              label: t("icon"),
-              widget: "relation",
-              collection: "config",
-              required: false,
-              file: "style",
-              search_fields: ["icons.*.name"],
-              display_fields: ["icons.*.name"],
-              options_length: 50,
-              value_field: "icons.*.icon",
-            },
-          ],
-        },
-        {
           name: "form",
           label: t("contact_form"),
           widget: "object",

@@ -17,9 +17,6 @@ const { title, description, thumbnail } = Astro.props;
 const searchImage = !!thumbnail
   ? await importImage(`${thumbnail}?w=120&h=120&ar=1&position=entropy`)
   : null;
-const socialImage = !!thumbnail
-  ? await importImage(`${thumbnail}?w=1200&h=630&ar=1&position=entropy`)
-  : null;
 
 const pageTitle = `${title} | ${data.sitename}`;
 ---
@@ -52,14 +49,12 @@ const pageTitle = `${title} | ${data.sitename}`;
 <meta property="og:url" content={Astro.url} />
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
-{socialImage && <meta property="og:image" content={socialImage} />}
 
 <!-- Twitter -->
 <meta property="twitter:card" content="summary_large_image" />
 <meta property="twitter:url" content={Astro.url} />
 <meta property="twitter:title" content={title} />
 <meta property="twitter:description" content={description} />
-{socialImage && <meta property="twitter:image" content={socialImage} />}
 
 <script is:inline>
   const setDarkMode = () => {

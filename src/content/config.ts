@@ -576,16 +576,6 @@ const config = defineCollection({
 				})
 			)
 			.optional(),
-
-		social: z
-			.array(
-				z.object({
-					href: z.string(),
-					label: z.string(),
-					icon: z.string().transform((val) => getIconName(val)),
-				})
-			)
-			.optional()
 	})
 })
 

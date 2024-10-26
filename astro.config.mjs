@@ -74,4 +74,7 @@ export default defineConfig({
   prefetch: {
     defaultStrategy: "viewport",
   },
+  redirects: {
+    "/": "/shop",
+  },
 });
